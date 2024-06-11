@@ -1,0 +1,202 @@
+body {
+    font-family: "Commissioner", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: rgb(46,46,46);
+    background: linear-gradient(180deg, rgba(46,46,46,1) 0%, rgba(30,30,30,1) 100%);
+    color: #ffffff;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.header-footer-custom {
+    background-color: #2b2b2bfa;
+}
+
+
+.smText {
+    font-size: 10px;
+    font-weight: 300;
+    color: #777777; /* Ensure small text is white */
+}
+
+.larText {
+    color: #ffffff; /* Ensure small text is white */
+}
+
+.futurePasswords {
+    color: #ffffff; /* Ensure small text is white */
+}
+
+.h2 {
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 700;
+    color: #ffffff; /* Ensure heading is white */
+}
+
+.settings {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #555;
+    box-shadow: 0px 14px 23px 2px rgba(0, 0, 0, 0.08);
+}
+
+.settings h2 {
+    color: #ff6347;
+}
+
+.settings label {
+    display: block;
+    margin: 10px 0;
+    line-height: 15px; /* Ensure labels are white */
+}
+
+/* Add these styles for the range input */
+.settings input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 5px;
+    background-color: #4d4d4d;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+
+.settings input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ff6347;
+    cursor: pointer;
+    transition: background 0.15s;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.settings input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ff6347;
+    cursor: pointer;
+    transition: background 0.15s;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.settings input[type="range"]::-webkit-slider-thumb:hover,
+.settings input[type="range"]:hover::-moz-range-thumb {
+    background: #ff4500;
+}
+
+.settings input[type="range"]:hover {
+    opacity: 1;
+}
+
+.settings input[type="number"] {
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 4px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #fff;
+    font-family: "Anonymous Pro", monospace;
+    font-size: 16px;
+}
+
+.settings input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.settings button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 28px;
+    background-color: #ff6347;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 700;
+}
+
+.settings button:hover {
+    background-color: #ff4500;
+}
+
+.output h2 {
+    color: #ff6347;
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 700;
+}
+
+#passwords {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#passwords div {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #555;
+    cursor: pointer;
+    position: relative;
+    font-family: "Anonymous Pro", monospace;
+    letter-spacing: 1px;
+    box-shadow: 0px 14px 23px 2px rgba(0, 0, 0, 0.08);
+    color: #ffffff; /* Ensure passwords are white */
+    word-wrap: break-word; /* Ensure long passwords wrap */
+    white-space: pre-wrap; /* Ensure long passwords wrap */
+}
+
+#passwords div:hover::after {
+    content: "Нажмите, чтобы скопировать!";
+    position: absolute;
+    left: 50%;
+    top: -30px;
+    transform: translateX(-50%);
+    background: rgb(0, 0, 0);
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+.copied {
+    background-color: #4caf50 !important;
+}
+
+footer {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    background: #2f2f2f6b;
+    color: white;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Add media query for mobile devices */
+@media (max-width: 576px) {
+    #passwords {
+        grid-template-columns: 1fr; /* Single column layout on mobile */
+    }
+}
